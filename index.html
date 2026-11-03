@@ -1,52 +1,163 @@
 <!doctype html>
 <html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Александр Щуров — разработчик и сисадмин</title>
-<meta name="description" content="Александр Щуров: Telegram-боты, парсеры, серверы, автоматизация. Python, Docker, Nginx, n8n.">
-<style>
-  :root { --fg:#111; --muted:#555; --line:#e5e5e5; --accent:#1f6feb; }
-  * { box-sizing:border-box; }
-  body { margin:0; font:16px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--fg); background:#fff; }
-  main { max-width:720px; margin:0 auto; padding:48px 20px 64px; }
-  h1 { font-size:32px; margin:0 0 6px; }
-  .role { color:var(--muted); font-size:18px; margin:0 0 28px; }
-  h2 { font-size:18px; margin:32px 0 10px; }
-  ul { margin:0; padding-left:20px; }
-  li { margin:4px 0; }
-  .contacts { display:flex; flex-wrap:wrap; gap:10px 18px; margin-top:8px; }
-  .contacts a { color:var(--accent); text-decoration:none; }
-  .contacts a:hover { text-decoration:underline; }
-  hr { border:0; border-top:1px solid var(--line); margin:32px 0; }
-  .tags { color:var(--muted); font-size:14px; }
-</style>
-</head>
-<body>
-<main>
-  <h1>Александр Щуров</h1>
-  <p class="role">Разработчик и программист.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Александр Щуров · разработчик</title>
+    <meta
+      name="description"
+      content="Александр Щуров: боты, сайты и веб-приложения, мобильные приложения, парсеры, серверы, автоматизация, смарт-контракты. Любой стек, любой масштаб."
+    />
+    <meta name="theme-color" content="#0a0712" />
+    <meta name="author" content="Александр Щуров" />
+    <link rel="canonical" href="https://qatrol.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://qatrol.github.io/" />
+    <meta property="og:title" content="Александр Щуров · разработчик" />
+    <meta
+      property="og:description"
+      content="Боты, сайты, приложения, серверы, автоматизация, смарт-контракты. Любой стек, любой масштаб."
+    />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Unbounded:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader__label">Qatrol</div>
+      <div class="preloader__bar"><span></span></div>
+    </div>
 
-  <h2>Что делаю</h2>
-  <ul>
-    <li>Telegram-боты на Python: заявки, уведомления, админ-панель, оплата.</li>
-    <li>Парсеры данных с выгрузкой в Excel и Google Sheets.</li>
-    <li>Серверы: Docker, Nginx, SSL, бэкапы, мониторинг.</li>
-    <li>Автоматизация на n8n и интеграции через API.</li>
-    <li>Ремонт и ускорение сайтов на WordPress и WooCommerce.</li>
-  </ul>
+    <header class="topbar">
+      <a class="brand" href="#top" data-goto="0" aria-label="Главная">Qatrol<span>.</span></a>
+      <nav class="nav" aria-label="Разделы">
+        <a href="#work" data-goto="1">Что делаю</a>
+        <a href="#projects" data-goto="2">Проекты</a>
+        <a href="#process" data-goto="3">Процесс</a>
+        <a href="#contact" data-goto="4">Написать</a>
+      </nav>
+      <button class="term-btn" id="term-btn" type="button" aria-label="Открыть терминал">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="4 17 10 11 4 5" />
+          <line x1="12" y1="19" x2="20" y2="19" />
+        </svg>
+      </button>
+    </header>
 
-  <h2>Стек</h2>
-  <p class="tags">Python, aiogram, Playwright, BeautifulSoup, Linux, Docker, Nginx, Bash, Node.js, WordPress, MySQL, n8n, API, Git</p>
+    <main class="slides" id="slides">
+      <section class="slide is-active" id="top" data-slide="0">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="slide__inner hero__inner">
+          <p class="hero__kicker" data-reveal>Александр Щуров · Qatrol</p>
+          <h1 class="hero__title" data-reveal>
+            Любой стек.<br />Любая задача.<br />До результата.
+          </h1>
+          <p class="hero__sub" data-reveal>
+            Боты, сайты, приложения, серверы, автоматизация, смарт-контракты.
+            Десятки проектов от идеи до продакшена, и каждый работает.
+          </p>
+          <div class="hero__actions" data-reveal>
+            <a class="btn btn--accent magnetic" href="#contact" data-goto="4">Написать</a>
+            <a class="btn btn--ghost magnetic" href="#projects" data-goto="2">Смотреть проекты</a>
+          </div>
+          <div class="hero__stats" data-reveal>
+            <div class="stat">
+              <span class="stat__num"><span data-count="20">0</span>+</span>
+              <span class="stat__label">проектов</span>
+            </div>
+            <div class="stat stat--wide">
+              <span class="stat__tools">Python · JavaScript · Docker · Nginx · Flutter · Solidity и т.д.</span>
+              <span class="stat__label">инструменты</span>
+            </div>
+            <div class="stat stat--wide">
+              <span class="stat__tools">Боты · Парсеры · Сайты · Приложения · Серверы и т.д.</span>
+              <span class="stat__label">направления</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <hr>
+      <section class="slide" id="work" data-slide="1">
+        <div class="slide__inner">
+          <div class="section__head">
+            <p class="section__kicker" data-reveal>Что делаю</p>
+            <h2 class="section__title" data-reveal>Любое направление. Один исполнитель.</h2>
+          </div>
+          <div class="grid grid--work" id="work-grid"></div>
+          <div class="stack-marquee" aria-hidden="true">
+            <div class="stack-marquee__track" id="stack-track"></div>
+          </div>
+        </div>
+      </section>
 
-  <h2>Контакты</h2>
-  <div class="contacts">
-    <a href="mailto:sanyashurov@yandex.ru">sanyashurov@yandex.ru</a>
-    <a href="https://github.com/Qatrol" target="_blank" rel="noopener">github.com/Qatrol</a>
-    <a href="tel:+79532796903">+7 953 279-69-03</a>
-  </div>
-</main>
-</body>
+      <section class="slide" id="projects" data-slide="2">
+        <div class="slide__inner">
+          <div class="section__head">
+            <p class="section__kicker" data-reveal>Проекты</p>
+            <h2 class="section__title" data-reveal>Не словами, а кодом.</h2>
+          </div>
+          <div class="project-list" id="project-list"></div>
+        </div>
+      </section>
+
+      <section class="slide" id="process" data-slide="3">
+        <div class="slide__inner">
+          <div class="section__head">
+            <p class="section__kicker" data-reveal>Как работаем</p>
+            <h2 class="section__title" data-reveal>Четыре шага до запуска.</h2>
+          </div>
+          <ol class="process-list" id="process-list"></ol>
+        </div>
+      </section>
+
+      <section class="slide" id="contact" data-slide="4">
+        <div class="slide__inner">
+          <div class="section__head">
+            <p class="section__kicker" data-reveal>Написать</p>
+            <h2 class="section__title" data-reveal>Есть задача? Расскажи.</h2>
+          </div>
+          <div class="contact" data-reveal>
+            <a class="contact__mail magnetic" href="mailto:sanyashurov@yandex.ru">sanyashurov@yandex.ru</a>
+            <div class="contact__links">
+              <a href="https://github.com/Qatrol" target="_blank" rel="noopener">github.com/Qatrol</a>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <span>© <span id="year"></span> Александр Щуров</span>
+          <button class="term-open" id="term-btn-2" type="button">терминал</button>
+        </footer>
+      </section>
+    </main>
+
+    <nav class="dots" aria-label="Слайды">
+      <button type="button" data-goto="0" aria-label="Главная" class="is-active"></button>
+      <button type="button" data-goto="1" aria-label="Что делаю"></button>
+      <button type="button" data-goto="2" aria-label="Проекты"></button>
+      <button type="button" data-goto="3" aria-label="Процесс"></button>
+      <button type="button" data-goto="4" aria-label="Связаться"></button>
+    </nav>
+
+    <div class="terminal" id="terminal" hidden>
+      <div class="terminal__box" role="dialog" aria-modal="true" aria-label="Терминал">
+        <div class="terminal__bar">
+          <span>qatrol@site:~$</span>
+          <button type="button" id="term-close" aria-label="Закрыть терминал">×</button>
+        </div>
+        <div class="terminal__log" id="term-log"></div>
+        <form class="terminal__form" id="term-form" autocomplete="off">
+          <span class="terminal__prompt">$</span>
+          <input id="term-input" name="cmd" type="text" aria-label="Команда" spellcheck="false" />
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
