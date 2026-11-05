@@ -32,7 +32,11 @@ function renderProjects() {
       (p) => `
       <article class="project-row">
         <div>
-          <h3 class="project-row__name">${p.name}</h3>
+          <h3 class="project-row__name">${
+            p.href
+              ? `<a href="${p.href}" target="_blank" rel="noopener noreferrer">${p.name}</a>`
+              : p.name
+          }</h3>
           <span class="project-row__stack">${p.stack}</span>
         </div>
         <p class="project-row__text"><span>Решает</span>${p.solves}</p>

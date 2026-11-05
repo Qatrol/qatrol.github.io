@@ -113,6 +113,20 @@ export const projects = [
     result: "Эмиссия и переводы on-chain.",
     stack: "Solidity",
   },
+  {
+    name: "DevOps AI Tutor",
+    solves: "Тренажёр по DevOps с ИИ-наставником: роадмап, задачи, квизы.",
+    result: "Учёба по плану, прогресс и ответы хранятся локально.",
+    stack: "Node.js · Express · DeepSeek",
+    href: "https://github.com/Qatrol/devops",
+  },
+  {
+    name: "File Online Manager",
+    solves: "Файловый менеджер в браузере: свои папки с любого устройства.",
+    result: "Доступ к файлам без облака и подписок, плюс заметки и чат.",
+    stack: "Node.js · Express · WebSocket",
+    href: "https://github.com/Qatrol/fileonlinemanager",
+  },
 ];
 
 export const steps = [
