@@ -114,18 +114,18 @@ export const projects = [
     stack: "Solidity",
   },
   {
-    name: "DevOps AI Tutor",
+    name: "Pathwright",
     solves: "Тренажёр по DevOps с ИИ-наставником: роадмап, задачи, квизы.",
     result: "Учёба по плану, прогресс и ответы хранятся локально.",
     stack: "Node.js · Express · DeepSeek",
-    href: "https://github.com/Qatrol/devops",
+    href: "https://github.com/Qatrol/pathwright",
   },
   {
-    name: "File Online Manager",
+    name: "Shelf",
     solves: "Файловый менеджер в браузере: свои папки с любого устройства.",
     result: "Доступ к файлам без облака и подписок, плюс заметки и чат.",
     stack: "Node.js · Express · WebSocket",
-    href: "https://github.com/Qatrol/fileonlinemanager",
+    href: "https://github.com/Qatrol/shelf",
   },
 ];
 
