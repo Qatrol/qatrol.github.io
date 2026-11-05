@@ -26,8 +26,7 @@ export function initTerminal() {
     help: () => line("Команды: help, about, skills, projects, contact, clear", "t-muted"),
     about: () => line(ABOUT),
     skills: () => line(stack.join(" · ")),
-    projects: () =>
-      projects.forEach((p) => line(`- ${p.name}${p.href ? ": " + p.href : ""}`)),
+    projects: () => projects.forEach((p) => line(`- ${p.name}`)),
     contact: () => line(CONTACT),
     clear: () => {
       log.innerHTML = "";
