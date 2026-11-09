@@ -347,6 +347,18 @@ button {
   .hero__stats { grid-template-columns: 1fr 1fr; gap: 20px; }
 }
 
+/* Телефоны: длинное слово «Инфраструктура» не влезало и обрезалось */
+@media (max-width: 560px) {
+  .hero__title {
+    font-size: clamp(1.5rem, 7.4vw, 2.4rem);
+    letter-spacing: -0.045em;
+    text-wrap: pretty;
+  }
+  .hero__kicker { letter-spacing: 0.18em; }
+  .hero__sub { font-size: 15px; }
+  .hero__actions .btn { flex: 1 1 100%; justify-content: center; }
+}
+
 /* ---------- section heads ---------- */
 .section__head { margin-bottom: clamp(26px, 4vh, 44px); }
 
@@ -781,3 +793,14 @@ button {
 }
 
 /* ---------- reduced motion (анимации оставляем: сайт презентационный) ---------- */
+
+/* ---------- телефоны: последний блок, перебивает правила выше ---------- */
+@media (max-width: 700px) {
+  /* Карточки «Что делаю»: три колонки на телефоне нечитаемы */
+  .grid--work { grid-template-columns: 1fr; }
+  .card--wide { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .card { padding: 18px; }
+  .hero__title { font-size: clamp(1.5rem, 7.4vw, 2.4rem); letter-spacing: -0.045em; }
+  /* шапка была на 94% непрозрачной, контент просвечивал под логотипом */
+  .topbar { background: #0a0712; }
+}
