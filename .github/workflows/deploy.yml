@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -19,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # токен не нужен после checkout и не должен попадать в .git раннера
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -32,6 +33,10 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    # права нужны только на публикацию, сборке они ни к чему
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

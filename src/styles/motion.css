@@ -1,0 +1,44 @@
+/*
+ * Появление элементов слайда. Скрываем только в режиме слайдера (.is-deck),
+ * иначе на мобилке контент остался бы невидимым: там initSlides выходит сразу.
+ */
+.is-deck [data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+}
+
+.is-deck [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--duration-reveal) ease, transform var(--duration-reveal) var(--ease-out);
+}
+
+.is-deck .process-step {
+  opacity: 0;
+  transform: translateX(-26px);
+}
+
+.is-deck .process-step.is-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.6s ease, transform 0.6s var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .is-deck [data-reveal],
+  .is-deck .process-step {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .stack-marquee__track { animation: none; }
+  .preloader__bar span { animation: none; }
+
+  .slides,
+  .card,
+  .btn,
+  .dots button::before {
+    transition: none;
+  }
+}

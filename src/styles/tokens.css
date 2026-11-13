@@ -1,0 +1,27 @@
+:root {
+  color-scheme: dark;
+
+  /* палитра */
+  --bg: #0a0712;
+  --bg-soft: #120c1f;
+  --bg-card: #140d22;
+  --fg: #f2eefb;
+  --muted: #a89ec0;
+  --accent: #c5a3ff;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+
+  /* шрифты */
+  --font-head: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  /* геометрия */
+  --max: 1280px;
+  --pad: clamp(18px, 4vw, 52px);
+  --radius: 14px;
+
+  /* движение */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-reveal: 0.64s;
+}

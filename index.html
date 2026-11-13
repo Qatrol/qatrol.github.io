@@ -29,13 +29,22 @@
     />
   </head>
   <body>
+    <noscript>
+      <!-- без JS прелоадер никто не снимет, и он закроет собой всё -->
+      <style>
+        .preloader { display: none !important; }
+      </style>
+    </noscript>
+
+    <a class="skip-link" href="#top">К содержимому</a>
+
     <div class="preloader" id="preloader" aria-hidden="true">
       <div class="preloader__label">Qatrol</div>
       <div class="preloader__bar"><span></span></div>
     </div>
 
     <header class="topbar">
-      <a class="brand" href="#top" data-goto="0" aria-label="Главная">Qatrol<span>.</span></a>
+      <a class="brand" href="#top" data-goto="0" aria-label="Qatrol — на главную">Qatrol<span>.</span></a>
       <nav class="nav" aria-label="Разделы">
         <a href="#work" data-goto="1">Что делаю</a>
         <a href="#projects" data-goto="2">Проекты</a>
@@ -52,9 +61,10 @@
 
     <main class="slides" id="slides">
       <section class="slide is-active" id="top" data-slide="0">
-        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="slide__decor" aria-hidden="true">
+          <div class="hero__glow"></div>
+        </div>
         <div class="slide__inner hero__inner">
-          <p class="hero__kicker" data-reveal>Qatrol</p>
           <h1 class="hero__title" data-reveal>
             DevOps-инженер.<br />Инфраструктура и код.<br />До результата.
           </h1>
@@ -108,6 +118,9 @@
       </section>
 
       <section class="slide" id="process" data-slide="3">
+        <div class="slide__decor" aria-hidden="true">
+          <div class="process__glow"></div>
+        </div>
         <div class="slide__inner">
           <div class="section__head">
             <p class="section__kicker" data-reveal>Как работаем</p>
@@ -126,7 +139,9 @@
           <div class="contact" data-reveal>
             <a class="contact__mail magnetic" href="mailto:sanyashurov@yandex.ru">sanyashurov@yandex.ru</a>
             <div class="contact__links">
-              <a href="https://github.com/Qatrol" target="_blank" rel="noopener">github.com/Qatrol</a>
+              <a href="https://github.com/Qatrol" target="_blank" rel="noopener noreferrer"
+                >github.com/Qatrol<span class="visually-hidden"> (откроется в новой вкладке)</span></a
+              >
             </div>
           </div>
         </div>
@@ -151,13 +166,24 @@
           <span>qatrol@site:~$</span>
           <button type="button" id="term-close" aria-label="Закрыть терминал">×</button>
         </div>
-        <div class="terminal__log" id="term-log"></div>
+        <div class="terminal__log" id="term-log" role="log" aria-live="polite" aria-relevant="additions"></div>
         <form class="terminal__form" id="term-form" autocomplete="off">
           <span class="terminal__prompt">$</span>
           <input id="term-input" name="cmd" type="text" aria-label="Команда" spellcheck="false" />
         </form>
       </div>
     </div>
+
+    <noscript>
+      <p class="noscript-note">
+        Для навигации по сайту нужен JavaScript. Почта:
+        <a href="mailto:sanyashurov@yandex.ru">sanyashurov@yandex.ru</a>,
+        GitHub:
+        <a href="https://github.com/Qatrol">github.com/Qatrol</a>.
+      </p>
+    </noscript>
+
+    <p class="visually-hidden" id="slide-status" aria-live="polite"></p>
 
     <script type="module" src="/src/main.js"></script>
   </body>

@@ -1,0 +1,171 @@
+/* ---------- шапка ---------- */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px var(--pad);
+  background: rgba(10, 7, 18, 0.94);
+  border-bottom: 1px solid var(--line);
+  transition: box-shadow 0.25s ease;
+}
+
+.topbar.is-scrolled { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35); }
+
+.brand {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.brand span { color: var(--accent); }
+
+.nav {
+  display: flex;
+  gap: 26px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.nav a { transition: color 0.2s ease; }
+.nav a:hover { color: var(--fg); }
+
+.term-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 36px;
+  padding: 0;
+  color: var(--accent);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.term-btn:hover { border-color: var(--accent); background: rgba(197, 163, 255, 0.08); }
+
+/* ---------- слайдер ---------- */
+.slides {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.6s var(--ease-out);
+  will-change: transform;
+}
+
+/*
+ * safe center: если контент выше экрана, он не уезжает за верхнюю границу
+ * (обычный center обрезает начало и до него нельзя доскроллить).
+ * Слайд сам скроллится, а slides.js отдаёт wheel браузеру, пока скролл
+ * не дошёл до края.
+ */
+.slide {
+  position: relative;
+  height: 100svh;
+  flex: 0 0 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: safe center;
+  padding: clamp(96px, 13vh, 150px) var(--pad) clamp(48px, 7vh, 80px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  /* тонкий ползунок вместо скрытого: он появляется только когда контент
+     реально не влез, и показывает, что слайд можно прокрутить */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(197, 163, 255, 0.35) transparent;
+}
+
+.slide::-webkit-scrollbar { width: 6px; }
+.slide::-webkit-scrollbar-track { background: transparent; }
+.slide::-webkit-scrollbar-thumb {
+  background: rgba(197, 163, 255, 0.35);
+  border-radius: 999px;
+}
+
+/*
+ * Слой для декоративных пятен. Обрезает их по границам слайда: абсолютный
+ * блик высотой 62vw иначе попадает в scrollable overflow и добавляет
+ * пустую прокрутку на слайде, где всё и так влезло.
+ */
+.slide__decor {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.slide__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+/* ---------- точки навигации ---------- */
+.dots {
+  position: fixed;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  /* кнопка 24×24 сделана ради размера цели, поэтому зазор нулевой:
+     иначе центры точек разъезжаются вдвое против прежних 20px */
+  gap: 0;
+}
+
+/* цель 24×24 при видимом кружке 8×8 — требование WCAG 2.2 */
+.dots button {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.dots button::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  /* не --line-strong: 16% белого даёт 1.5:1, индикатор управления требует 3:1 */
+  background: rgba(255, 255, 255, 0.45);
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dots button.is-active::before {
+  background: var(--accent);
+  transform: scale(1.5);
+  box-shadow: 0 0 12px rgba(197, 163, 255, 0.8);
+}
+
+/* ---------- подвал ---------- */
+.footer {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  width: min(calc(100% - 2 * var(--pad)), var(--max));
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
