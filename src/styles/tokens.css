@@ -11,10 +11,13 @@
   --line: rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 255, 255, 0.16);
 
-  /* шрифты */
-  --font-head: "Unbounded", "Arial Black", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "SFMono-Regular", ui-monospace, "Cascadia Code", Consolas, monospace;
+  /* шрифты — на Apple SF Pro берётся из системы, на остальных его отдаёт
+     fonts.css. Display для крупных кеглей, Text для основного текста */
+  --font-head: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue",
+    "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue",
+    "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "SF Mono", SFMono-Regular, ui-monospace, "Cascadia Code", Consolas, monospace;
 
   /* геометрия */
   --max: 1280px;

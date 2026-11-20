@@ -39,12 +39,12 @@
 .hero__title {
   margin: 0 0 24px;
   font-family: var(--font-head);
-  font-weight: 800;
+  font-weight: 700;
   /* потолок по высоте окна: на широком и невысоком экране 7.4vw даёт
      строку, которая одна не влезает в слайд */
   font-size: clamp(2.6rem, min(7.4vw, 10.5vh), 6.6rem);
   line-height: 0.96;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.02em;
   text-wrap: balance;
   text-shadow: 0 6px 60px rgba(0, 0, 0, 0.6);
 }
@@ -76,7 +76,7 @@
 
 .stat__num {
   font-family: var(--font-head);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(1.6rem, 3vw, 2.6rem);
   line-height: 1;
   color: var(--accent);
@@ -109,10 +109,10 @@
 .section__title {
   margin: 0;
   font-family: var(--font-head);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(1.8rem, 4vw, 3.4rem);
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.018em;
   max-width: 24ch;
 }
 
@@ -178,10 +178,10 @@
 .process-step__title {
   margin: 0 0 6px;
   font-family: var(--font-head);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(1.3rem, 2.6vw, 2.3rem);
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.018em;
 }
 
 .process-step__line {

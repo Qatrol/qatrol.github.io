@@ -1,0 +1,78 @@
+/*
+ * SF Pro — системный шрифт Apple. На iPhone, iPad и Mac браузер берёт его
+ * из системы (-apple-system), а эти файлы нужны для Windows, Android и Linux.
+ * Сами файлы — сабсет: латиница + кириллица + пунктуация, ~25 КБ на начертание.
+ * Display идёт для крупных кеглей, Text — для основного текста, как у Apple.
+ */
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display Regular"), local("SFProDisplay-Regular"),
+    url("/fonts/sf-pro-display-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display Medium"), local("SFProDisplay-Medium"),
+    url("/fonts/sf-pro-display-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display Semibold"), local("SFProDisplay-Semibold"),
+    url("/fonts/sf-pro-display-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("SF Pro Display Bold"), local("SFProDisplay-Bold"),
+    url("/fonts/sf-pro-display-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: local("SF Pro Text Regular"), local("SFProText-Regular"),
+    url("/fonts/sf-pro-text-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: local("SF Pro Text Medium"), local("SFProText-Medium"),
+    url("/fonts/sf-pro-text-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: local("SF Pro Text Semibold"), local("SFProText-Semibold"),
+    url("/fonts/sf-pro-text-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: local("SF Pro Text Bold"), local("SFProText-Bold"),
+    url("/fonts/sf-pro-text-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

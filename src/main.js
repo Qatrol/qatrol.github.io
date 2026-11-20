@@ -3,6 +3,7 @@
  * компоненты → движение → адаптив. Через @import внутри CSS не делаем:
  * Vite в dev-режиме резолвит такие пути от корня проекта и падает.
  */
+import "./styles/fonts.css";
 import "./styles/tokens.css";
 import "./styles/base.css";
 import "./styles/layout.css";
